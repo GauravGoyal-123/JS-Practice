@@ -6,9 +6,57 @@
     <title>form</title>
 </head>
 <body>
-    <h1>Hostel Detail Form</h1>
+    <ul class="main">
+
+    </ul>
+
+    <!-- <h1>Hostel Detail Form</h1>
     <input type="text" placeholder="Full Name">
-    <input type="number" placeholder="Roll Number">
-    
+    <input type="number" placeholder="Roll Number"> -->
+    <!-- <ul class="language">
+        <li>CPP</li>
+    </ul> -->
+    <!-- <div id="parent">
+        <div class="child">Monday</div>
+        <div class="child">Tuesday</div>
+        <div class="child">Wednesday</div>
+        <div class="child">Thursday</div>
+    </div> -->
 </body>
+<script>
+    function addList(textArr, bgArr) {
+
+        for(let i = 0; i < textArr.length; i++) {
+            const list = document.createElement('li');
+            list.setAttribute('class', 'child');
+            const listText = document.createTextNode(`${textArr[i]}`);
+            list.appendChild(listText);
+            // console.log(list);
+            const ul = document.querySelector('.main');
+            const ul2 = document.getElementsByClassName('main')
+            console.log(ul2);
+            console.log(ul);
+            
+            ul.appendChild(list);
+        }
+        
+        
+
+    }
+    // const parent = document.getElementById('parent');
+    // const parent2 = document.querySelector('#parent');
+    // console.log(parent2);
+    // console.log(parent);
+    // const child = parent2.children;
+    // for(let i = 0; i < child.length; i++) {
+    //     console.log(parent2.children[i].innerHTML)
+    // }
+    // parent2.children[0].style.backgroundColor = 'green';
+    // parent2.children[0].style.padding = '15px';
+    // parent2.children[0].style.borderRadius = '10px';
+    // const dayOne = document.querySelector('.child');
+    // console.log(dayOne.parentElement);
+    // console.log(parent2.firstElementChild);
+    // console.log(parent2.lastElementChild);
+</script>
 </html>
