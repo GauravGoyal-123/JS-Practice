@@ -7,7 +7,7 @@
 </head>
 <body>
     <ul class="main">
-
+        <li>Python</li>
     </ul>
 
     <!-- <h1>Hostel Detail Form</h1>
@@ -24,25 +24,40 @@
     </div> -->
 </body>
 <script>
-    function addList(textArr, bgArr) {
-
-        for(let i = 0; i < textArr.length; i++) {
-            const list = document.createElement('li');
-            list.setAttribute('class', 'child');
-            const listText = document.createTextNode(`${textArr[i]}`);
-            list.appendChild(listText);
-            // console.log(list);
-            const ul = document.querySelector('.main');
-            const ul2 = document.getElementsByClassName('main')
-            console.log(ul2);
-            console.log(ul);
-            
-            ul.appendChild(list);
-        }
-        
-        
-
+    function edit() {
+        const oldli = document.querySelector('li');
+        const newli = document.createElement('li');
+        newli.appendChild(document.createTextNode('Java'));
+        // method1
+        // oddli.replaceWith(newli);
+        // method2
+        // oldli.outerHTML = '<li>JAVA</li>'
     }
+
+    function Remove(n) {
+        const removeli = document.querySelector("li:nth-child(n)");
+        removeli.remove();
+    } 
+    // function addList(textArr, bgArr) {
+
+        // for(let i = 0; i < textArr.length; i++) {
+        //     let list = document.createElement('li');
+        //     list.setAttribute('class', 'child');
+        //     let listText = document.createTextNode(`${textArr[i]}`);
+        //     list.appendChild(listText);
+        //     // console.log(list);
+        //     let ul = document.querySelector('.main');
+        //     let ul2 = document.getElementsByClassName('main');
+        //     ul2.appendChild(list);
+            // console.log(ul2);
+            // console.log(ul);
+            // let arr = Array.from(ul2);
+            // ul.appendChild(list); // working
+        // }
+        
+        
+
+    // }
     // const parent = document.getElementById('parent');
     // const parent2 = document.querySelector('#parent');
     // console.log(parent2);
